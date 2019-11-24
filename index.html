@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mark Calculator</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="javascript.js"></script>
+    </head>
+    <body>
+        <div class="sidenav">
+            <a id="add-unit" href="#">+</a>
+        </div>
+
+        <div class="main">
+
+            <label>Unit Name</label>
+            <input type="text" id="unit-name">
+            <br>
+            <br>
+
+            <table>
+                <tr>
+                    <th>Assignment Name</th>
+                    <th>Weight</th>
+                    <th>Mark</th>
+                    <th>Weighted Mark</th>
+                </tr>
+                <tr>
+                    <td> <input type="text" class="name"> </td>
+                    <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" value="0" class="weight"> </td>
+                    <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" value="0" class="mark"> </td>
+                    <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" value="0" class="weighted-mark" disabled> </td>
+                    <td> <button class="btn-delete-row">X</button> </td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total-weight">0</td>
+                    <td></td>
+                    <td id="total-weighted-mark">0</td>
+                </tr>
+            </table>
+            <br>
+            <button id="btn-add-row">Add Row</button>
+            <br>
+            <br>
+
+            <label>Exam weight:</label>
+            <input id="exam-weight" type="text" disabled>
+            <br>
+
+            <label>To get a HD:</label>
+            <input id="hd" type="text" disabled>
+            <br>
+
+            <label>To get a DN:</label>
+            <input id="dn" type="text" disabled>
+            <br>
+
+            <label>To get a CR:</label>
+            <input id="cr" type="text" disabled>
+            <br>
+
+            <label>To get a PP:</label>
+            <input id="pp" type="text" disabled>
+            <br>
+            <br>
+
+            <button id="btn-delete-unit">Delete Unit</button>
+        </div>
+    </body>
+</html>
