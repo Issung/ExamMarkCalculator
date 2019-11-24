@@ -4,7 +4,7 @@ $(document).ready(function () {
     var units = [];
 
     if (jsonUnits != null) {
-        debugger;
+        //debugger;
 
         units = JSON.parse(jsonUnits);
 
@@ -89,7 +89,7 @@ $(document).ready(function () {
         var unit = {};
         var assignments = [];
 
-        $('tr:not(:first):not(:last)').each(function () {
+        $('#assignments-table tr:not(:first):not(:last)').each(function () {
             var assignment = {};
             assignment.name = $(this).find('.name').val();
             assignment.weight = $(this).find('.weight').val();
@@ -111,16 +111,16 @@ $(document).ready(function () {
 
         $('#unit-name').val(unit.name);
 
-        $('table tr:not(:first-child):not(:last-child)').remove();
+        $('#assignments-table tr:not(:first-child):not(:last-child)').remove();
 
         for(var i = 0; i < unit.assignments.length; i++) {
-            $('table').find('tr:last').before(`
+            $('#assignments-table').find('tr:last').before(`
                 <tr>
                     <td> <input type="text" class="name" value="${unit.assignments[i].name}"> </td>
                     <td> <input type="number" min="0" max="100" step="0.01" class="weight" value=${unit.assignments[i].weight}> </td>
                     <td> <input type="number" min="0" max="100" step="0.01" class="mark" value="${unit.assignments[i].mark}"> </td>
                     <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" class="weighted-mark" disabled> </td>
-                    <td> <button class="btn-delete-row">X</button> </td>
+                    <td> <a class="btn-delete-row">&times;</a> </td>
                 </tr>
             `);
         }
@@ -128,7 +128,7 @@ $(document).ready(function () {
         UpdateEverything();
     }
 
-    $('table').on('input', 'input[type="number"]', function() {
+    $('#assignments-table').on('input', 'input[type="number"]', function() {
         var max = 100;
         var min = 0;
         if ($(this).val() > max)
@@ -141,27 +141,27 @@ $(document).ready(function () {
         } 
     });
     
-    $('table').on('input', '.weight', function(e) {
+    $('#assignments-table').on('input', '.weight', function(e) {
         UpdateEverything();
     });
 
-    $('table').on('input', '.mark', function(e) {
+    $('#assignments-table').on('input', '.mark', function(e) {
         UpdateEverything();
     });
 
     $('#btn-add-row').click(function () {
-        $('table').find('tr:last').prev().after(`
+        $('#assignments-table').find('tr:last').prev().after(`
             <tr>
                 <td> <input type="text" class="name"> </td>
                 <td> <input type="number" min="0" max="100" step="0.01" value="0" class="weight"> </td>
                 <td> <input type="number" min="0" max="100" step="0.01" value="0" class="mark"> </td>
                 <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" value="0" class="weighted-mark" disabled> </td>
-                <td> <button class="btn-delete-row">X</button> </td>
+                <td> <a class="btn-delete-row">&times;</a> </td>
             </tr>
         `);
     });
 
-    $('table').on('click', '.btn-delete-row', function() {
+    $('#assignments-table').on('click', '.btn-delete-row', function() {
         $(this).parent().parent().remove();
     });
 
@@ -184,7 +184,7 @@ $(document).ready(function () {
         var weightSum = 0;
         var weightedMarkSum = 0;
 
-        $('tr:not(:first):not(:last)').each(function () {
+        $('#assignments-table tr:not(:first):not(:last)').each(function () {
             var weight = Number($(this).find('.weight').val());
             var mark = Number($(this).find('.mark').val());
             var weightedMark = (weight / 100) * mark;

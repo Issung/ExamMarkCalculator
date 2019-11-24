@@ -14,12 +14,13 @@
 
         <div class="main">
 
-            <label>Unit Name</label>
+            <label style="font-weight: bold;">Unit Name</label>
+            <br>
             <input type="text" id="unit-name">
             <br>
             <br>
 
-            <table>
+            <table id="assignments-table">
                 <tr>
                     <th>Assignment Name</th>
                     <th>Weight</th>
@@ -31,42 +32,64 @@
                     <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" value="0" class="weight"> </td>
                     <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" value="0" class="mark"> </td>
                     <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" value="0" class="weighted-mark" disabled> </td>
-                    <td> <button class="btn-delete-row">X</button> </td>
+                    <td> <a class="btn-delete-row">&times;</a> </td>
                 </tr>
                 <tr>
-                    <td>Total</td>
+                    <td>
+                        <button id="btn-add-row">Add Row</button>
+                    </td>
                     <td id="total-weight">0</td>
                     <td></td>
                     <td id="total-weighted-mark">0</td>
                 </tr>
             </table>
-            <br>
-            <button id="btn-add-row">Add Row</button>
-            <br>
-            <br>
 
-            <label>Exam weight:</label>
-            <input id="exam-weight" type="text" disabled>
-            <br>
+            <table>
+                <tr>
+                    <td>
+                        Exam Weight
+                    </td>
+                    <td>
+                        <input id="exam-weight" type="text" disabled>
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        To get a HD
+                    </td>
+                    <td>
+                        <input id="hd" type="text" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        To get a DN
+                    </td>
+                    <td>
+                        <input id="dn" type="text" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        To get a CR
+                    </td>
+                    <td>
+                        <input id="cr" type="text" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        To get a PP
+                    </td>
+                    <td>
+                        <input id="pp" type="text" disabled>
+                    </td>
+                </tr>
+            </table>
 
-            <label>To get a HD:</label>
-            <input id="hd" type="text" disabled>
             <br>
-
-            <label>To get a DN:</label>
-            <input id="dn" type="text" disabled>
-            <br>
-
-            <label>To get a CR:</label>
-            <input id="cr" type="text" disabled>
-            <br>
-
-            <label>To get a PP:</label>
-            <input id="pp" type="text" disabled>
-            <br>
-            <br>
-
-            <button id="btn-delete-unit">Delete Unit</button>
+            <button id="btn-delete-unit" class="btn-red">Delete Unit</button>
         </div>
     </body>
 </html>
