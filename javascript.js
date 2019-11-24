@@ -22,7 +22,7 @@ $(document).ready(function () {
     }
     else {
         AddUnit();
-        Openunit(0);
+        OpenUnit(0);
     }
 
     function GetIndexOfSelectedUnit()
