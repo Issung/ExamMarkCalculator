@@ -110,7 +110,7 @@ button:hover {
 }
 
 .btn-red:hover {
-    background-color: #FF5E5E;
+    background-color: #FF7F7F;
 }
 
 input {
@@ -144,6 +144,7 @@ input[type="number"] {
 
 #assignments-table tr:last-child td {
     padding-top: 15px;
+    padding-left: 5px;
 }
 
 input:focus {
@@ -176,4 +177,28 @@ input:disabled {
 
 table th {
     text-align: left;
+}
+
+#sidenav-footer {
+    z-index: 1;
+    width: 105px;
+    position: fixed;
+    left: 10px;
+    bottom: 15px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
+
+#sidenav-footer * {
+    width:100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:white;
+    font-size: 12px;
+    float: left;
+    text-align: left;
+}
+
+#sidenav-footer p {
+    margin-bottom: 2px;
 }

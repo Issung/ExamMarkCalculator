@@ -227,6 +227,7 @@ $(document).ready(function () {
 
     function UpdateSidebarWidth() {
         $('.main').css('margin-left', $('.sidenav').width());
+        $('#sidenav-footer').css('width', $('.sidenav').width() - 10);
     }
 
     $(window).on('beforeunload', function () {
