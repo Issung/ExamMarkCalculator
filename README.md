@@ -1,6 +1,6 @@
-# ExamMarkCalculator - issung.github.io/ExamMarkCalculator/
+# [ExamMarkCalculator](https://issung.github.io/ExamMarkCalculator/)
 A quick and easy calculator that tells you what mark you need to achieve on your exams for each milestone.
-The calculator is hosted by GitHub, to use it go here: issung.github.io/ExamMarkCalculator/
+The calculator is hosted by GitHub, to use it go here: [issung.github.io/ExamMarkCalculator/](https://issung.github.io/ExamMarkCalculator/)
 ___
 This is a very basic calculator with a sole function of calculating what mark you need to achieve on your school examination for each mark milestone. This calculator uses the milestones of my university, I am not sure if they differ at other universities. The marks are:
 * High Distinction (80% or above)
