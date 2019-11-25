@@ -18,4 +18,5 @@ There are some basic features to tote:
 * Made by an actual student ([Me](https://github.com/Issung)).
  
 If you find any issues or have any suggestions please contact me or use the issues section of this repository. 
+
 Good luck on your exams!
