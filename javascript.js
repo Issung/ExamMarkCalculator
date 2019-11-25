@@ -226,7 +226,7 @@ $(document).ready(function () {
     }
 
     function UpdateSidebarWidth() {
-        $('.main').css('margin-left', $('.sidenav').width());
+        $('.main').css('margin-left', $('.sidenav').width() + 5);
         $('#sidenav-footer').css('width', $('.sidenav').width() - 10);
     }
 
@@ -235,6 +235,10 @@ $(document).ready(function () {
     
         localStorage.setItem('units', JSON.stringify(units));
         localStorage.setItem('activeUnit', GetIndexOfSelectedUnit());
+    });
+
+    $(window).resize(function () {
+        UpdateSidebarWidth();
     });
 });
 
