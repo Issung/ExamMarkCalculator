@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mark Calculator</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="javascript.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153227118-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-153227118-1');
+        </script>
+
+    </head>
+    <body>
+        <div class="sidenav">
+            <a id="add-unit" href="#">+</a>    
+        </div>
+
+        <div id="sidenav-footer">
+            <!-- <p>This website is open source</p>
+            <a target="_blank" href="https://github.com/Issung/ExamMarkCalculator/">GitHub</a> -->
+            <p>This website is <a target="_blank" href="https://github.com/Issung/ExamMarkCalculator/">open source</a></p>
+
+            <p>Website</p>
+            <a target="_blank" href="https://github.com/Issung/">Joel Goransson</a>
+            
+            <p>Design</p>
+            <a target="_blank" href="https://www.instagram.com/typedesigns_/">Tyler Hall</a>
+        </div>
+
+        <div class="main">
+
+            <label style="font-weight: bold;">Unit Name</label>
+            <br>
+            <input type="text" id="unit-name" style="margin-top:4px;">
+            <br>
+            <br>
+
+            <table id="assignments-table">
+                <tr>
+                    <th style="padding: 0px;">Assignment Name</th>
+                    <th>Weight</th>
+                    <th>Mark</th>
+                    <th>Weighted Mark</th>
+                </tr>
+                <tr>
+                    <td> <input type="text" class="name"> </td>
+                    <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" value="0" class="weight"> </td>
+                    <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" value="0" class="mark"> </td>
+                    <td> <input type="number" pattern="[0-9]" min="0" max="100" step="0.01" value="0" class="weighted-mark" disabled> </td>
+                    <td> <a class="btn-delete-row">&times;</a> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="btn-add-row">Add Row</button>
+                    </td>
+                    <td id="total-weight">0</td>
+                    <td></td>
+                    <td id="total-weighted-mark">0</td>
+                </tr>
+            </table>
+
+            <table id="marks-table">
+                <tr>
+                    <td>
+                        Exam Weight
+                    </td>
+                    <td>
+                        <input id="exam-weight" type="text" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        To get a HD (80%)
+                    </td>
+                    <td>
+                        <input id="hd" type="text" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        To get a DN (70%)
+                    </td>
+                    <td>
+                        <input id="dn" type="text" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        To get a CR (60%)
+                    </td>
+                    <td>
+                        <input id="cr" type="text" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        To get a PP (50%)
+                    </td>
+                    <td>
+                        <input id="pp" type="text" disabled>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            <button id="btn-delete-unit" class="btn-red">Delete Unit</button>
+        </div>
+    </body>
+</html>
